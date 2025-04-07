@@ -36,9 +36,9 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <span className="text-xl font-semibold tracking-tight">Essentials</span>
+          <span className="text-xl font-semibold tracking-tight">ILAina maika</span>
         </Link>
-
+{/* commentaire  */}
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
