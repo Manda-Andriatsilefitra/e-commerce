@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 5%;
+
+    --primary: 220 20% 5%;
+    --primary-foreground: 220 10% 98%;
+
+    --secondary: 220 10% 98%;
+    --secondary-foreground: 220 20% 5%;
+
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 220 10% 96%;
+    --accent-foreground: 220 20% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 10% 92%;
+    --input: 220 10% 92%;
+    --ring: 220 20% 80%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+    letter-spacing: -0.025em;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/90 border border-white/20 shadow-lg;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-xl bg-black/5 border border-white/10;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 md:py-24 md:px-8 lg:px-16;
+  }
+  
+  .hero-text {
+    @apply font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
